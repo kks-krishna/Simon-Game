@@ -1,7 +1,8 @@
-let gameSeq=[];
+    let gameSeq=[];
 let userSeq=[];
 let list=[];
 let NameOfList=[];
+let Go = document.querySelector(".Str")
 
 let nam = prompt("Enter Player Name")
 let Restart = document.querySelector("#resrt")
@@ -29,7 +30,7 @@ let body = document.querySelector("body")
 let started = false;
 let level = 0
 
-document.addEventListener("keypress", function() {
+Go.addEventListener("click", function() {
     if(started== false) {  //-------- >Starting Game by Pressing Any Key
         started = true; 
         Nh.innerText=`${nam} is Playing`
@@ -62,7 +63,7 @@ function userFlash(bt){
 function levelUp(){
     userSeq=[];
     level++;
-    h2.innerText=`Level ${level}`
+    // h2.innerText=`Level ${level}`
  let btns = ["yellow","red","purple","green"];   //--------> Flash Animation by Pressing Any Key.
  let Rindx = Math.floor(Math.random()*3)
  let RndColor = btns[Rindx]
